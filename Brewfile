@@ -44,5 +44,7 @@ cask "font-profont-nerd-font"
 cask "font-space-mono-nerd-font"
 
 # instapaper
-mas "Instapaper Save", id: 1481302432 # save
-mas "Instapaper", id: 288545208 # mac app
+mas "Instapaper Save", id: 1481302432
+mas "Instapaper", id: 288545208
+mas "Bear App", id: 1091189122
+mas "TickTick", id: 966085870
