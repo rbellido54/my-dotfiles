@@ -109,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+[ -f ~/.envs.zsh ] && source ~/.envs.zsh
 [ -f ~/.aliases.zsh ] && source ~/.aliases.zsh
 [ -f ~/.path-exports.zsh ] && source ~/.path-exports.zsh
 [ -f ~/.functions.zsh ] && source ~/.functions.zsh
