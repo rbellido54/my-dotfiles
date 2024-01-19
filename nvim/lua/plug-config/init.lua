@@ -1,0 +1,6 @@
+require "plug-config/nvim-tree"
+require "plug-config/which-key"
+require "plug-config/which-key-mappings"
+require "plug-config/winshift"
+require "plug-config/copilot"
+require "plug-config/coq_thirdparty"
