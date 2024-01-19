@@ -22,7 +22,7 @@ apply-tmux:
 .PHONY: create-envs
 create-envs:
 	@echo "Creating .envs.zsh"
-	@ln -s $(PWD)/.envs.zsh $(HOME)/.envs.zsh
+	@cp $(PWD)/.envs.zsh $(HOME)/.envs.zsh
 
 .PHONY: apply-functions
 apply-functions:
