@@ -15,12 +15,24 @@ brew "zsh"
 brew "zsh-autosuggestions"
 brew "starship"
 
-brew "git"
+brew "awscli"
+brew "curl"
+brew "fd"
+brew "fzf"
 brew "gh"
+brew "git"
+brew "git-delta"
+brew "openssl@1.1"
 brew "neovim"
 brew "tmux"
 brew "ripgrep"
-brew "fzf"
+brew "jq"
+brew "yq"
+brew "tree"
+
+# Languages
+brew "rbenv"
+brew "ruby-build"
 
 # NerdFonts
 cask "font-noto-nerd-font"
