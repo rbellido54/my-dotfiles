@@ -1,3 +1,6 @@
+.PHONY: all
+all: apply-zshrc apply-nvim apply-tmux apply-envs apply-functions apply-fzf apply-path-exports apply-aliases apply-gitconfig
+
 .PHONY: apply-zshrc
 apply-zshrc:
 	@echo "Applying .zshrc"
@@ -52,4 +55,3 @@ apply-gitconfig:
 	-@rm $(HOME)/.gitconfig
 	@ln -s $(PWD)/.gitconfig $(HOME)/.gitconfig
 
-all: apply-zshrc apply-nvim apply-tmux apply-envs apply-functions apply-fzf apply-path-exports apply-aliases apply-gitconfig
