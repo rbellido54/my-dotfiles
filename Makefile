@@ -1,5 +1,5 @@
 .PHONY: all
-all: apply-zshrc apply-nvim apply-tmux apply-functions apply-fzf apply-path-exports apply-aliases apply-gitconfig
+all: apply-zshrc apply-nvim apply-tmux apply-functions apply-fzf apply-path-exports apply-aliases
 
 .PHONY: apply-zshrc
 apply-zshrc:
@@ -48,9 +48,8 @@ apply-aliases:
 	-@rm $(HOME)/.aliases.zsh
 	@ln -s $(PWD)/.aliases.zsh $(HOME)/.aliases.zsh
 
-.PHONY: apply-gitconfig
-apply-gitconfig:
-	@echo "Applying .gitconfig"
-	-@rm $(HOME)/.gitconfig
-	@ln -s $(PWD)/.gitconfig $(HOME)/.gitconfig
+.PHONY: create-gitconfig
+create-gitconfig:
+	@echo "Creating .gitconfig"
+	@cp $(PWD)/.gitconfig $(HOME)/.gitconfig
 
