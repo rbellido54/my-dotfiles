@@ -1,5 +1,5 @@
 .PHONY: all
-all: apply-zshrc apply-nvim apply-tmux apply-envs apply-functions apply-fzf apply-path-exports apply-aliases apply-gitconfig
+all: apply-zshrc apply-nvim apply-tmux apply-functions apply-fzf apply-path-exports apply-aliases apply-gitconfig
 
 .PHONY: apply-zshrc
 apply-zshrc:
@@ -19,10 +19,9 @@ apply-tmux:
 	-@rm $(HOME)/.tmux.conf
 	@ln -s $(PWD)/.tmux.conf $(HOME)/.tmux.conf
 
-.PHONY: apply-envs
-apply-envs:
-	@echo "Applying .envs.zsh"
-	-@rm $(HOME)/.envs.zsh
+.PHONY: create-envs
+create-envs:
+	@echo "Creating .envs.zsh"
 	@ln -s $(PWD)/.envs.zsh $(HOME)/.envs.zsh
 
 .PHONY: apply-functions
