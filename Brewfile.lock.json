@@ -9,6 +9,9 @@
       },
       "buo/cask-upgrade": {
         "revision": "ddcf0f3be9c568517aa3076d8f99a44249a20057"
+      },
+      "homebrew/services": {
+        "revision": "33b407f77320756bf9aaf5832b6e2a5c5595634f"
       }
     },
     "brew": {

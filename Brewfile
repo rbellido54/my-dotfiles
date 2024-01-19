@@ -1,5 +1,6 @@
 # 'brew tap'
 tap "homebrew/cask-fonts"
+tap "homebrew/services"
 tap "sambadevi/powerlevel9k"
 tap "buo/cask-upgrade"
 
