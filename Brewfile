@@ -3,6 +3,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "sambadevi/powerlevel9k"
 tap "buo/cask-upgrade"
+tap "hashicorp/tap"
 
 # set arguments for all 'brew install --cask' commands
 cask_args appdir: "~/Applications", require_sha: true
@@ -34,6 +35,7 @@ brew "tree"
 # Languages
 brew "rbenv"
 brew "ruby-build"
+brew "hashicorp/tap/terraform"
 
 # NerdFonts
 cask "font-noto-nerd-font"
