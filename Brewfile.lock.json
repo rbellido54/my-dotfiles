@@ -1049,6 +1049,66 @@
             "require_sha": true
           }
         }
+      },
+      "font-go-mono-nerd-font": {
+        "version": "3.1.1",
+        "options": {
+          "full_name": "font-go-mono-nerd-font",
+          "args": {
+            "appdir": "~/Applications",
+            "require_sha": true
+          }
+        }
+      },
+      "font-hurmit-nerd-font": {
+        "version": "3.1.1",
+        "options": {
+          "full_name": "font-hurmit-nerd-font",
+          "args": {
+            "appdir": "~/Applications",
+            "require_sha": true
+          }
+        }
+      },
+      "font-monofur-nerd-font": {
+        "version": "3.1.1",
+        "options": {
+          "full_name": "font-monofur-nerd-font",
+          "args": {
+            "appdir": "~/Applications",
+            "require_sha": true
+          }
+        }
+      },
+      "font-profont-nerd-font": {
+        "version": "3.1.1",
+        "options": {
+          "full_name": "font-profont-nerd-font",
+          "args": {
+            "appdir": "~/Applications",
+            "require_sha": true
+          }
+        }
+      },
+      "font-space-mono-nerd-font": {
+        "version": "3.1.1",
+        "options": {
+          "full_name": "font-space-mono-nerd-font",
+          "args": {
+            "appdir": "~/Applications",
+            "require_sha": true
+          }
+        }
+      }
+    },
+    "mas": {
+      "Instapaper Save": {
+        "id": "1481302432",
+        "version": "1.4"
+      },
+      "Instapaper": {
+        "id": "288545208",
+        "version": "8.5"
       }
     }
   },

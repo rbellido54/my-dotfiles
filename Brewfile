@@ -37,7 +37,12 @@ brew "ruby-build"
 # NerdFonts
 cask "font-noto-nerd-font"
 cask "font-hack-nerd-font"
+cask "font-go-mono-nerd-font"
+cask "font-hurmit-nerd-font"
+cask "font-monofur-nerd-font"
+cask "font-profont-nerd-font"
+cask "font-space-mono-nerd-font"
 
 # instapaper
-mas 1481302432 # save
-mas 288545208 # mac app
+mas "Instapaper Save", id: 1481302432 # save
+mas "Instapaper", id: 288545208 # mac app
