@@ -117,3 +117,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Starship
 eval "$(starship init zsh)"
+
+# Ruby / rbenv
+eval "$(rbenv init - zsh)"
+
+# Python / pyenv
+eval "$(pyenv init -)"

@@ -36,6 +36,7 @@ brew "tree"
 brew "rbenv"
 brew "ruby-build"
 brew "hashicorp/tap/terraform"
+brew "pyenv"
 
 # NerdFonts
 cask "font-noto-nerd-font"
