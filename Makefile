@@ -16,8 +16,9 @@ apply-nvim:
 .PHONY: apply-tmux
 apply-tmux:
 	@echo "Applying .tmux.conf"
-	-@rm $(HOME)/.tmux.conf
-	@ln -s $(PWD)/.tmux.conf $(HOME)/.tmux.conf
+	-@rm $(HOME)/.tmux.conf && ln -s $(PWD)/.tmux.conf $(HOME)/.tmux.conf
+	@echo "Applying .tmux.conf.local"
+	-@rm $(HOME)/.tmux.conf.local && ln -s $(PWD)/.tmux.conf.local $(HOME)/.tmux.conf.local
 
 .PHONY: create-envs
 create-envs:
