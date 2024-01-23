@@ -1,0 +1,38 @@
+###### Override tmux defaults (.tmux.conf) here ######
+
+
+
+# Set C-j as the secondary prefix key. This allows you to control tmux with C-j in addition to C-b.
+# I find C-j to be a more convenient prefix key because the j key exists in the home row of the keyboard right under the index finger.
+set -g prefix2 C-j
+
+# Send the secondary prefix key to a window, i.e., send C-j when C-j C-j is pressed. This allows you to send C-j to a program running within tmux.
+bind-key C-j send-prefix -2
+
+# It is convenient to be able to kill a window or a pane without having to go through a confirmation prompt.
+bind-key & kill-window
+bind-key x kill-pane
+
+# Open a new pane or window with the current directory of the current pane, not the directory in which the first tmux session was started.
+# Here the -c option is used to specify the start directory for the new pane. The current path is represented with the replacement variable pane_current_path in the commands above.
+# The -h option specifies that the window should be split into left and right panes.
+bind '"' split-window -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
+
+# color status bar
+set -g status-style fg=white,bg=colour235
+# color of message bar
+set -g message-style fg=black,bold,bg=green
+
+# highlight current window
+setw -g window-status-style fg=cyan,bg=colour235
+setw -g window-status-current-style fg=white,bold,bg=red
+
+# set color of active pane
+set -g pane-border-style fg=colour240,bg=black
+set -g pane-active-border-style fg=green,bg=black
+
+set-option -sg escape-time 10
+
+# toggle the status line
+bind s set-option -g status
