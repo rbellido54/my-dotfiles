@@ -31,6 +31,7 @@ brew "ripgrep"
 brew "jq"
 brew "yq"
 brew "tree"
+brew "mysql"
 
 # Languages
 brew "rbenv"
