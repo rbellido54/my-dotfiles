@@ -110,11 +110,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'github/copilot.vim'
     " Plug 'zbirenbaum/copilot.lua' 
 
+    " Lint
+    Plug 'mfussenegger/nvim-lint'
+
+    " Formatter
+    Plug 'stevearc/conform.nvim'
+
     """""""""""""""" Ruby/rails related plugins """"""""""""""""""
-
-    " ale for ruby & standardrb
-    Plug 'dense-analysis/ale'
-
 
     """""""""""""""" PHP-related plugins """"""""""""""""
 

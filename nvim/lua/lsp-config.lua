@@ -1,5 +1,5 @@
 require("mason").setup()
-local servers = { "solargraph", "gopls", "lua_ls" }
+local servers = { "gopls", "lua_ls" }
 
 require("mason-lspconfig").setup({
   ensure_installed = servers
