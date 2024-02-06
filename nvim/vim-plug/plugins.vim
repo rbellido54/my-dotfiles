@@ -116,6 +116,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Formatter
     Plug 'stevearc/conform.nvim'
 
+    " Indent-lines
+    Plug 'lukas-reineke/indent-blankline.nvim'
+    Plug 'lukas-reineke/virt-column.nvim'
+
     """""""""""""""" Ruby/rails related plugins """"""""""""""""""
 
     """""""""""""""" PHP-related plugins """"""""""""""""
