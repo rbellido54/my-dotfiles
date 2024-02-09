@@ -1,6 +1,8 @@
 require('lint').linters_by_ft = {
   markdown = {'vale',},
-  ruby = {'standardrb'}
+  ruby = {'standardrb'},
+  erb = { 'erb_lint' },
+  zsh = { 'zsh' },
 }
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
