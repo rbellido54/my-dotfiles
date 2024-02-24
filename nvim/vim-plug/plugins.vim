@@ -79,9 +79,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Snippets are separated from the engine. Add this if you want them:
     Plug 'honza/vim-snippets'
 
-    " Tagbar for viewing class class outline
-    " Plug 'preservim/tagbar'
-
     " kill buffer not window
     Plug 'qpkorr/vim-bufkill'
 
@@ -123,6 +120,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Obsidian
     Plug 'epwalsh/obsidian.nvim'
 
+    " For Lua/Neovim development
+    Plug 'nvim-lua/plenary.nvim'
+
 
     """""""""""""""" Ruby/rails related plugins """"""""""""""""""
 
@@ -136,8 +136,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Phpactor
     " Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
-
-    " For Lua/Neovim development
-    Plug 'nvim-lua/plenary.nvim'
 
 call plug#end()

@@ -1,11 +1,17 @@
-require("obsidian").setup({
+require("obsidian").setup {
   -- A list of workspace names, paths, and configuration overrides.
   -- If you use the Obsidian app, the 'path' of a workspace should generally be
   -- your vault root (where the `.obsidian` folder is located).
+  -- When obsidian.nvim is loaded by your plugin manager, it will automatically set
+  -- the workspace to the first workspace in the list whose `path` is a parent of the
+  -- current markdown file being edited.
   workspaces = {
     {
       name = "personal",
       path = "~/notes/personal",
+      overrides = {
+        notes_subdir = "notes",
+      },
     },
     {
       name = "work",
@@ -30,7 +36,7 @@ require("obsidian").setup({
 
   daily_notes = {
     -- Optional, if you keep daily notes in a separate directory.
-    -- folder = "notes/dailies",
+    folder = "notes/dailies",
     -- Optional, if you want to change the date format for the ID of daily notes.
     date_format = "%Y-%m-%d",
     -- Optional, if you want to change the date format of the default alias of daily notes.
@@ -40,36 +46,12 @@ require("obsidian").setup({
   },
 
   -- Optional, completion of wiki links, local markdown links, and tags using nvim-cmp.
-  completion = {
-    -- Set to false to disable completion.
-    nvim_cmp = false,
-
-    -- Trigger completion at 2 chars.
-    min_chars = 2,
-
-    -- Where to put new notes created from completion. Valid options are
-    --  * "current_dir" - put new notes in same directory as the current buffer.
-    --  * "notes_subdir" - put new notes in the default notes subdirectory.
-    new_notes_location = "current_dir",
-
-    -- Either 'wiki' or 'markdown'.
-    preferred_link_style = "wiki",
-
-    -- Control how wiki links are completed with these (mutually exclusive) options:
-    --
-    -- 1. Whether to add the note ID during completion.
-    -- E.g. "[[Foo" completes to "[[foo|Foo]]" assuming "foo" is the ID of the note.
-    -- Mutually exclusive with 'prepend_note_path' and 'use_path_only'.
-    prepend_note_id = true,
-    -- 2. Whether to add the note path during completion.
-    -- E.g. "[[Foo" completes to "[[notes/foo|Foo]]" assuming "notes/foo.md" is the path of the note.
-    -- Mutually exclusive with 'prepend_note_id' and 'use_path_only'.
-    prepend_note_path = false,
-    -- 3. Whether to only use paths during completion.
-    -- E.g. "[[Foo" completes to "[[notes/foo]]" assuming "notes/foo.md" is the path of the note.
-    -- Mutually exclusive with 'prepend_note_id' and 'prepend_note_path'.
-    use_path_only = false,
-  },
+  -- completion = {
+  --   -- Set to false to disable completion.
+  --   nvim_cmp = true,
+  --   -- Trigger completion at 2 chars.
+  --   min_chars = 2,
+  -- },
 
   -- Optional, configure key mappings. These are the defaults. If you don't want to set any keymappings this
   -- way then set 'mappings = {}'.
@@ -90,6 +72,11 @@ require("obsidian").setup({
     },
   },
 
+  -- Where to put new notes. Valid options are
+  --  * "current_dir" - put new notes in same directory as the current buffer.
+  --  * "notes_subdir" - put new notes in the default notes subdirectory.
+  new_notes_location = "notes_subdir",
+
   -- Optional, customize how names/IDs for new notes are created.
   note_id_func = function(title)
     -- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
@@ -108,7 +95,31 @@ require("obsidian").setup({
     return tostring(os.time()) .. "-" .. suffix
   end,
 
+  -- Optional, customize how wiki links are formatted.
+  ---@param opts {path: string, label: string, id: string|?}
+  ---@return string
+  wiki_link_func = function(opts)
+    if opts.id == nil then
+      return string.format("[[%s]]", opts.label)
+    elseif opts.label ~= opts.id then
+      return string.format("[[%s|%s]]", opts.id, opts.label)
+    else
+      return string.format("[[%s]]", opts.id)
+    end
+  end,
+
+  -- Optional, customize how markdown links are formatted.
+  ---@param opts {path: string, label: string, id: string|?}
+  ---@return string
+  markdown_link_func = function(opts)
+    return string.format("[%s](%s)", opts.label, opts.path)
+  end,
+
+  -- Either 'wiki' or 'markdown'.
+  preferred_link_style = "wiki",
+
   -- Optional, customize the default name or prefix when pasting images via `:ObsidianPasteImg`.
+  ---@return string
   image_name_func = function()
     -- Prefix image names with timestamp.
     return string.format("%s-", os.time())
@@ -119,9 +130,15 @@ require("obsidian").setup({
   disable_frontmatter = false,
 
   -- Optional, alternatively you can customize the frontmatter data.
+  ---@return table
   note_frontmatter_func = function(note)
-    -- This is equivalent to the default frontmatter function.
+    -- Add the title of the note as an alias.
+    if note.title then
+      note:add_alias(note.title)
+    end
+
     local out = { id = note.id, aliases = note.aliases, tags = note.tags }
+
     -- `note.metadata` contains any manually added fields in the frontmatter.
     -- So here we just make sure those fields are kept in the frontmatter.
     if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
@@ -129,39 +146,25 @@ require("obsidian").setup({
         out[k] = v
       end
     end
+
     return out
   end,
 
   -- Optional, for templates (see below).
-  -- templates = {
-  --   subdir = "templates",
-  --   date_format = "%Y-%m-%d",
-  --   time_format = "%H:%M",
-  --   -- A map for custom variables, the key should be the variable and the value a function
-  --   substitutions = {},
-  -- },
-
-  -- Optional, customize the backlinks interface.
-  backlinks = {
-    -- The default height of the backlinks location list.
-    height = 10,
-    -- Whether or not to wrap lines.
-    wrap = true,
-  },
-
-  -- Optional, customize the tags interface.
-  tags = {
-    -- The default height of the tags location list.
-    height = 10,
-    -- Whether or not to wrap lines.
-    wrap = true,
+  templates = {
+    subdir = "templates",
+    date_format = "%Y-%m-%d",
+    time_format = "%H:%M",
+    -- A map for custom variables, the key should be the variable and the value a function
+    substitutions = {},
   },
 
   -- Optional, by default when you use `:ObsidianFollowLink` on a link to an external
   -- URL it will be ignored but you can customize this behavior here.
+  ---@param url string
   follow_url_func = function(url)
     -- Open the URL in the default web browser.
-    vim.fn.jobstart({ "open", url }) -- Mac OS
+    vim.fn.jobstart({"open", url})  -- Mac OS
     -- vim.fn.jobstart({"xdg-open", url})  -- linux
   end,
 
@@ -172,18 +175,17 @@ require("obsidian").setup({
   -- Optional, set to true to force ':ObsidianOpen' to bring the app to the foreground.
   open_app_foreground = false,
 
-  -- Optional, by default commands like `:ObsidianSearch` will attempt to use
-  -- telescope.nvim, fzf-lua, fzf.vim, or mini.pick (in that order), and use the
-  -- first one they find. You can set this option to tell obsidian.nvim to always use this
-  -- finder.
-  finder = "telescope.nvim",
-
-  -- Optional, configure key mappings for the finder. These are the defaults.
-  -- If you don't want to set any mappings this way then set
-  finder_mappings = {
-    -- Create a new note from your query with `:ObsidianSearch` and `:ObsidianQuickSwitch`.
-    -- Currently only telescope supports this.
-    new = "<C-x>",
+  picker = {
+    -- Set your preferred picker. Can be one of 'telescope.nvim', 'fzf-lua', or 'mini.pick'.
+    name = "telescope.nvim",
+    -- Optional, configure key mappings for the picker. These are the defaults.
+    -- Not all pickers support all mappings.
+    mappings = {
+      -- Create a new note from your query.
+      new = "<C-x>",
+      -- Insert a link to the selected note.
+      insert_link = "<C-l>",
+    },
   },
 
   -- Optional, sort search results by "path", "modified", "accessed", or "created".
@@ -201,8 +203,8 @@ require("obsidian").setup({
   -- Optional, configure additional syntax highlighting / extmarks.
   -- This requires you have `conceallevel` set to 1 or 2. See `:help conceallevel` for more details.
   ui = {
-    enable = true,         -- set to false to disable all additional syntax features
-    update_debounce = 200, -- update delay after a text change (in milliseconds)
+    enable = true,  -- set to false to disable all additional syntax features
+    update_debounce = 200,  -- update delay after a text change (in milliseconds)
     -- Define how various check-boxes are displayed
     checkboxes = {
       -- NOTE: the 'char' value has to be a single character, and the highlight groups are defined below.
@@ -243,12 +245,12 @@ require("obsidian").setup({
     -- The default folder to place images in via `:ObsidianPasteImg`.
     -- If this is a relative path it will be interpreted as relative to the vault root.
     -- You can always override this per image by passing a full path to the command instead of just a filename.
-    img_folder = "assets/imgs", -- This is the default
+    img_folder = "assets/imgs",  -- This is the default
     -- A function that determines the text to insert in the note when pasting an image.
-    -- It takes two arguments, the `obsidian.Client` and a plenary `Path` to the image file.
+    -- It takes two arguments, the `obsidian.Client` and an `obsidian.Path` to the image file.
     -- This is the default implementation.
     ---@param client obsidian.Client
-    ---@param path Path the absolute path to the image file
+    ---@param path obsidian.Path the absolute path to the image file
     ---@return string
     img_text_func = function(client, path)
       local link_path
@@ -264,12 +266,4 @@ require("obsidian").setup({
       return string.format("![%s](%s)", display_name, link_path)
     end,
   },
-
-  -- Optional, set the YAML parser to use. The valid options are:
-  --  * "native" - uses a pure Lua parser that's fast but potentially misses some edge cases.
-  --  * "yq" - uses the command-line tool yq (https://github.com/mikefarah/yq), which is more robust
-  --    but much slower and needs to be installed separately.
-  -- In general you should be using the native parser unless you run into a bug with it, in which
-  -- case you can temporarily switch to the "yq" parser until the bug is fixed.
-  yaml_parser = "native",
-})
+}
