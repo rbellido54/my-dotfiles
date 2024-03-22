@@ -31,5 +31,5 @@ local vmaps = {
 
 }
 
-wk.register(nmaps, {mode = "n", noremap = true, silent = true})
-wk.register(vmaps, {mode = "v", noremap = true, silent = true})
+wk.register(nmaps, { mode = "n", noremap = true, silent = true })
+wk.register(vmaps, { mode = "v", noremap = true, silent = true })

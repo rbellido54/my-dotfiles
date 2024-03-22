@@ -123,6 +123,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " For Lua/Neovim development
     Plug 'nvim-lua/plenary.nvim'
 
+    " Show marks beside line numbers
+    Plug 'chentoast/marks.nvim'
+
 
     """""""""""""""" Ruby/rails related plugins """"""""""""""""""
 
