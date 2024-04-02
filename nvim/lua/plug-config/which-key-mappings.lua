@@ -7,6 +7,7 @@ local nmaps = {
   ["<leader>G"] = { "<cmd>RG<cr>", "RipGrep" },
   ["<leader>gg"] = { "<cmd>GGrep<cr>", "Git Grep" },
   ["<leader>t"] = { "<cmd>Tags<cr>", "Tags" },
+  ["<leader>th"] = { "<cmd>Colors<cr>", "Themes" },
   ["<leader>m"] = { "<cmd>Marks<cr>", "Marks" },
   ["<leader>h"] = { "<cmd>nohlsearch<cr>", "Toggle search highlights" },
   ["<leader>ag"] = { "<cmd>Ag<cr>", "Silver Searcher" },
@@ -21,8 +22,6 @@ local nmaps = {
       g = { "<cmd>GGrep<cr>", "Git Grep" },
       j = { "<plug>(signify-next-hunk)" },
       k = { "<plug>(signify-prev-hunk)" },
-      J = { "9999<leader>gj" },
-      K = { "9999<leader>gk" },
     },
   }
 }
