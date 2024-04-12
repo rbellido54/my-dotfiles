@@ -31,6 +31,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'rebelot/kanagawa.nvim'
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
     Plug 'ellisonleao/gruvbox.nvim'
+    Plug 'yorickpeterse/vim-paper'
     " End THEMES
 
     " Native LSP
