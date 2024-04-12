@@ -4,6 +4,7 @@ tap "homebrew/services"
 tap "sambadevi/powerlevel9k"
 tap "buo/cask-upgrade"
 tap "hashicorp/tap"
+brew "jesseduffield/lazygit/lazygit"
 
 # set arguments for all 'brew install --cask' commands
 cask_args appdir: "~/Applications", require_sha: true
@@ -27,6 +28,7 @@ brew "git"
 brew "git-delta"
 brew "httpie"
 brew "jq"
+brew "lazygit"
 brew "mysql"
 brew "neovim"
 brew "openssl@1.1"
