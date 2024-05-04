@@ -1,59 +1,94 @@
-# 'brew tap'
-tap "homebrew/cask-fonts"
-tap "homebrew/services"
-tap "sambadevi/powerlevel9k"
 tap "buo/cask-upgrade"
 tap "hashicorp/tap"
-brew "jesseduffield/lazygit/lazygit"
+tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
+tap "homebrew/services"
+tap "jesseduffield/lazygit"
+tap "localstack/tap"
+tap "sambadevi/powerlevel9k"
+tap "stripe/stripe-cli"
 
-# set arguments for all 'brew install --cask' commands
-cask_args appdir: "~/Applications", require_sha: true
-
-brew "mas"
-brew "powerlevel9k"
-brew "coreutils"
-brew "gnupg" if OS.mac?
-
-brew "zsh"
-brew "zsh-autosuggestions"
-brew "starship"
-
+brew "zstd"
+brew "autoconf"
+brew "automake"
+brew "python@3.11"
 brew "awscli"
 brew "bat"
+brew "glib"
+brew "coreutils"
 brew "curl"
+brew "doctl"
 brew "fd"
+brew "open-mpi"
+brew "flyctl"
 brew "fzf"
 brew "gh"
 brew "git"
 brew "git-delta"
+brew "gnupg"
+brew "gpgme"
+brew "harfbuzz"
+brew "pkg-config"
 brew "httpie"
+brew "libtool"
+brew "imagemagick"
 brew "jq"
-brew "lazygit"
+brew "libfido2"
+brew "libpq"
+brew "pango"
+brew "librsvg"
+brew "libxml2"
+brew "libyaml"
+brew "mas"
 brew "mysql"
 brew "neovim"
+brew "nvm"
 brew "openssl@1.1"
-brew "ripgrep"
+brew "openssl@3.0"
 brew "tmux"
-brew "tree"
-brew "yq"
-
-# Languages
-brew "rbenv"
-brew "ruby-build"
-brew "hashicorp/tap/terraform"
+brew "overmind"
+brew "pinentry-mac"
+brew "poppler"
+brew "postgresql@16"
+brew "powerlevel10k"
 brew "pyenv"
+brew "ruby-build"
+brew "rbenv"
+brew "redis"
+brew "ripgrep"
+brew "starship"
+brew "taglib"
+brew "tflint"
+brew "tree"
+brew "vips"
+brew "yq"
+brew "zsh"
+brew "zsh-autosuggestions"
+brew "hashicorp/tap/terraform"
+brew "jesseduffield/lazygit/lazygit"
+brew "localstack/tap/localstack-cli"
+brew "sambadevi/powerlevel9k/powerlevel9k"
+brew "stripe/stripe-cli/stripe"
+cask "1password-cli"
+cask "font-go-mono-nerd-font", args: { appdir: "~/Applications" }
+cask "font-hack-nerd-font", args: { appdir: "~/Applications" }
+cask "font-hurmit-nerd-font", args: { appdir: "~/Applications" }
+cask "font-meslo-lg-nerd-font", args: { appdir: "~/Applications" }
+cask "font-monofur-nerd-font", args: { appdir: "~/Applications" }
+cask "font-noto-nerd-font", args: { appdir: "~/Applications" }
+cask "font-profont-nerd-font", args: { appdir: "~/Applications" }
+cask "font-space-mono-nerd-font", args: { appdir: "~/Applications" }
+cask "orbstack"
+cask "alacritty"
 
-# NerdFonts
-cask "font-noto-nerd-font"
-cask "font-hack-nerd-font"
-cask "font-go-mono-nerd-font"
-cask "font-hurmit-nerd-font"
-cask "font-monofur-nerd-font"
-cask "font-profont-nerd-font"
-cask "font-space-mono-nerd-font"
-
-# instapaper
-mas "Instapaper Save", id: 1481302432
+mas "1Password for Safari", id: 1569813296
+mas "Adobe Lightroom", id: 1451544217
+mas "Bear", id: 1091189122
 mas "Instapaper", id: 288545208
-mas "Bear App", id: 1091189122
+mas "Instapaper Save", id: 1481302432
+mas "Notion Web Clipper", id: 1559269364
+mas "Paprika Recipe Manager 3", id: 1303222628
+mas "Tailscale", id: 1475387142
+mas "TestFlight", id: 899247664
 mas "TickTick", id: 966085870
+mas "Xcode", id: 497799835
