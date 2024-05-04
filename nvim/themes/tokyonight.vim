@@ -1,4 +1,3 @@
-let g:tokyonight_style = "night"
 let g:tokyonight_italic_functions = 1
 let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
 
@@ -8,10 +7,10 @@ let g:tokyonight_colors = {
   \ 'error': '#ff0000'
 \ }
 
-let g:airline_theme = 'tokyonight'
+let g:airline_theme = 'storm'
 
 " Load the colorscheme
-colorscheme tokyonight-night
+" colorscheme tokyonight-night
 " colorscheme tokyonight-storm
-" colorscheme tokyonight-moon
+colorscheme tokyonight-moon
 " colorscheme tokyonight-day

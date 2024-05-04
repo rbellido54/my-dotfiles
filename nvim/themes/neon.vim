@@ -1,3 +1,3 @@
-let g:neon_style = "doom"
+let g:neon_style = "default"
 
 colorscheme neon
