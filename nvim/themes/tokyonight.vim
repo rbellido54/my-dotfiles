@@ -11,7 +11,7 @@ let g:tokyonight_colors = {
 let g:airline_theme = 'tokyonight'
 
 " Load the colorscheme
-" colorscheme tokyonight-night
+colorscheme tokyonight-night
 " colorscheme tokyonight-storm
 " colorscheme tokyonight-moon
-colorscheme tokyonight-day
+" colorscheme tokyonight-day
