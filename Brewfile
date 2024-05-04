@@ -1,7 +1,6 @@
 # 'brew tap'
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
-tap "sambadevi/powerlevel9k"
 tap "buo/cask-upgrade"
 tap "hashicorp/tap"
 brew "jesseduffield/lazygit/lazygit"
@@ -10,7 +9,7 @@ brew "jesseduffield/lazygit/lazygit"
 cask_args appdir: "~/Applications", require_sha: true
 
 brew "mas"
-brew "powerlevel9k"
+brew "powerlevel10k"
 brew "coreutils"
 brew "gnupg" if OS.mac?
 
