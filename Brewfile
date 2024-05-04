@@ -42,8 +42,13 @@ brew "rbenv"
 brew "ruby-build"
 brew "hashicorp/tap/terraform"
 brew "pyenv"
+brew "nvm"
+
+# Dev tools
+brew "orbstack"
 
 # NerdFonts
+cask "font-meslo-lg-nerd-font"
 cask "font-noto-nerd-font"
 cask "font-hack-nerd-font"
 cask "font-go-mono-nerd-font"
@@ -57,3 +62,4 @@ mas "Instapaper Save", id: 1481302432
 mas "Instapaper", id: 288545208
 mas "Bear App", id: 1091189122
 mas "TickTick", id: 966085870
+mas "Tailscale", id: 1475387142
