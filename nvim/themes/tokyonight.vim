@@ -7,7 +7,7 @@ let g:tokyonight_colors = {
   \ 'error': '#ff0000'
 \ }
 
-let g:airline_theme = 'storm'
+let g:airline_theme = 'moon'
 
 " Load the colorscheme
 " colorscheme tokyonight-night
