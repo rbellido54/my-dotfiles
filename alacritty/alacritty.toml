@@ -4,8 +4,8 @@ import = [
 
 [font]
 normal.family = "MesloLGS Nerd Font Mono"
-size = 12.25
-offset = { x = 1, y = 3 }
+size = 13
+offset = { x = 1, y = 2 }
 
 [env]
 TERM = "xterm-256color"
