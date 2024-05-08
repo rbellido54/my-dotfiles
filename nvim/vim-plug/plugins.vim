@@ -32,6 +32,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
     Plug 'ellisonleao/gruvbox.nvim'
     Plug 'yorickpeterse/vim-paper'
+    Plug 'eldritch-theme/eldritch.nvim'
     " End THEMES
 
     " Native LSP
