@@ -119,9 +119,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'lukas-reineke/indent-blankline.nvim'
     Plug 'lukas-reineke/virt-column.nvim'
 
-    " Obsidian
-    Plug 'epwalsh/obsidian.nvim'
-
     " For Lua/Neovim development
     Plug 'nvim-lua/plenary.nvim'
 
