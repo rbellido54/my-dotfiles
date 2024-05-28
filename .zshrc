@@ -122,15 +122,16 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.functions.zsh ] && source ~/.functions.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Starship
+# Starship prompt
 eval "$(starship init zsh)"
+
+# p10k prompt
+# source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Ruby / rbenv
 eval "$(rbenv init - zsh)"
 
 # Python / pyenv
 eval "$(pyenv init -)"
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
