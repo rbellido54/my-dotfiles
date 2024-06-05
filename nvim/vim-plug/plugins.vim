@@ -87,7 +87,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " floaterm
     Plug 'voldikss/vim-floaterm'
 
-    " zen mode
+    " zhen mode
     Plug 'junegunn/goyo.vim'
 
     " Git integration
@@ -106,8 +106,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'wellle/targets.vim'
 
     " GH Co-pilot baby
-    Plug 'github/copilot.vim'
-    " Plug 'zbirenbaum/copilot.lua' 
+    " Plug 'github/copilot.vim'
+    Plug 'zbirenbaum/copilot.lua'
+    Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
 
     " Lint
     Plug 'mfussenegger/nvim-lint'

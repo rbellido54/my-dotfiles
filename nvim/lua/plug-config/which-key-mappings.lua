@@ -23,6 +23,28 @@ local nmaps = {
       j = { "<plug>(signify-next-hunk)" },
       k = { "<plug>(signify-prev-hunk)" },
     },
+    c = {
+      cq = {
+        function()
+          local input = vim.fn.input("Quick Chat: ")
+          if input ~= "" then
+            require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
+          end
+        end, "CopilotChat - quick chat"
+      },
+      -- ch = {
+      --   function()
+      --     local actions = require("CopilotChat.actions")
+      --     require("CopilotChat.integrations.fzflua").pick(actions.help_actions())
+      --   end, "Copilotchat - help actions"
+      -- },
+      -- cp = {
+      --   function()
+      --     local actions = require("CopilotChat.actions")
+      --     require("CopilotChat.integrations.fzflua").pick(actions.prompt_actions())
+      --   end, "Copilotchat - prompt actions"
+      -- }
+    }
   }
 }
 
