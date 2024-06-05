@@ -7,6 +7,7 @@ require("conform").setup({
     html = { "prettier" },
     css = { "prettier" },
     shell = { "shfmt" },
+    ts = { "ts-standard" }
   },
   -- If this is set, Conform will run the formatter on save.
   -- It will pass the table to conform.format().
