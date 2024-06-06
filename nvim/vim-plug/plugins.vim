@@ -106,7 +106,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'wellle/targets.vim'
 
     " GH Co-pilot baby
-    " Plug 'github/copilot.vim'
+    Plug 'github/copilot.vim'
     Plug 'zbirenbaum/copilot.lua'
     Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
 
