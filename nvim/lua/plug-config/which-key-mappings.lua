@@ -6,6 +6,7 @@ local nmaps = {
 	["<leader>g"] = { "<cmd>Rg<cr>", "RipGrep" },
 	["<leader>G"] = { "<cmd>RG<cr>", "RipGrep" },
 	["<leader>gg"] = { "<cmd>GGrep<cr>", "Git Grep" },
+	["<leader>lg"] = { "<cmd>LazyGit<cr>", "LazyGit" },
 	["<leader>gs"] = { "<cmd>Ag<cr>", "Silver Searcher" },
 	["<leader>t"] = { "<cmd>Tags<cr>", "Tags" },
 	["<leader>th"] = { "<cmd>Colors<cr>", "Themes" },

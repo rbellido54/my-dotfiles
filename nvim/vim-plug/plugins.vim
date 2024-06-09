@@ -126,6 +126,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Show marks beside line numbers
     Plug 'chentoast/marks.nvim'
 
+    " Lazygit plugin in neovim
+    Plug 'kdheepak/lazygit.nvim'
 
     """""""""""""""" Ruby/rails related plugins """"""""""""""""""
 
