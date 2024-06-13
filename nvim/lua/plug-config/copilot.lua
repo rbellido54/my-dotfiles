@@ -184,9 +184,9 @@ vim.g.copilot_proxy_strict_ssl = 0
 vim.keymap.set('i', '<S-Tab>', 'copilot#Accept("\\<S-Tab>")', { expr = true, replace_keycodes = false })
 
 local chat = require('CopilotChat')
-local actions = require('CopilotChat.actions')
 
 chat.setup({
+  debug = true,
   question_header = '',
   answer_header = '',
   error_header = '',
