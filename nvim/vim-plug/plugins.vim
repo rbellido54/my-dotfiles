@@ -102,6 +102,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Vim repeat for repeating plugin commands
     Plug 'tpope/vim-repeat'
 
+    " Because even neovim doesn't have support for ruby text objects
+    Plug 'tek/vim-textobj-ruby'
+    Plug 'kana/vim-textobj-user'
+
     " Plugin to add more text objects
     Plug 'wellle/targets.vim'
 
