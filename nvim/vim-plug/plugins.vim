@@ -133,6 +133,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Lazygit plugin in neovim
     Plug 'kdheepak/lazygit.nvim'
 
+    " Dadbod for database support
+    Plug 'tpope/vim-dadbod'
+
     """""""""""""""" Ruby/rails related plugins """"""""""""""""""
 
     """""""""""""""" PHP-related plugins """"""""""""""""
