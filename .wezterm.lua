@@ -6,10 +6,10 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
 
-config.color_scheme = "Catppuccin Macchiato (Gogh)"
+config.color_scheme = "Everblush"
 
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
-config.font_size = 13
+config.font_size = 13.0
 
 config.enable_tab_bar = false
 
