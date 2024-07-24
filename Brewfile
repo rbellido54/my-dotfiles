@@ -73,6 +73,7 @@ brew "jesseduffield/lazygit/lazygit"
 brew "localstack/tap/localstack-cli"
 brew "sambadevi/powerlevel9k/powerlevel9k"
 brew "stripe/stripe-cli/stripe"
+
 cask "1password-cli"
 cask "font-go-mono-nerd-font", args: { appdir: "~/Applications" }
 cask "font-hack-nerd-font", args: { appdir: "~/Applications" }
