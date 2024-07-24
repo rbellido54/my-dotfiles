@@ -19,6 +19,8 @@ brew "coreutils"
 brew "curl"
 brew "doctl"
 brew "fd"
+brew "ffmpegthumbnailer"
+brew "file"
 brew "open-mpi"
 brew "flyctl"
 brew "fzf"
@@ -60,7 +62,9 @@ brew "starship"
 brew "taglib"
 brew "tflint"
 brew "tree"
+brew "unar"
 brew "vips"
+brew "yazi"
 brew "yq"
 brew "zsh"
 brew "zsh-autosuggestions"
@@ -80,6 +84,7 @@ cask "font-profont-nerd-font", args: { appdir: "~/Applications" }
 cask "font-space-mono-nerd-font", args: { appdir: "~/Applications" }
 cask "orbstack"
 cask "alacritty"
+cask "wezterm"
 
 mas "1Password for Safari", id: 1569813296
 mas "Adobe Lightroom", id: 1451544217
@@ -90,5 +95,4 @@ mas "Notion Web Clipper", id: 1559269364
 mas "Paprika Recipe Manager 3", id: 1303222628
 mas "Tailscale", id: 1475387142
 mas "TestFlight", id: 899247664
-mas "TickTick", id: 966085870
 mas "Xcode", id: 497799835
