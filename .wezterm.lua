@@ -6,7 +6,7 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
 
-config.color_scheme = "Everblush"
+config.color_scheme = "Everforest Dark (Gogh)"
 
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
 config.font_size = 13.0
