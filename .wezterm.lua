@@ -9,9 +9,9 @@ local config = wezterm.config_builder()
 -- config.color_scheme = "PaleNightHC"
 -- config.color_scheme = "Palenight (Gogh)"
 -- config.color_scheme = "Pali (Gogh)"
--- config.color_scheme = "Poimandres Storm"
+config.color_scheme = "Poimandres Storm"
 -- config.color_scheme = "Poimandres"
-config.color_scheme = "Ryuuko"
+-- config.color_scheme = "Ryuuko"
 -- config.color_scheme = "Seafoam Pastel"
 -- config.color_scheme = "Slate (Gogh)"
 -- config.color_scheme = "Spacegray Eighties (Gogh)"
@@ -23,7 +23,7 @@ config.color_scheme = "Ryuuko"
 -- config.color_scheme = "rose-pine-dawn"
 -- config.color_scheme = "Tomorrow"
 
-config.font = wezterm.font("MesloLGS Nerd Font Mono")
+config.font = wezterm.font("GeistMono Nerd Font", { weight = "ExtraBold" })
 config.font_size = 13.0
 
 config.enable_tab_bar = false
