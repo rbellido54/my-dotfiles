@@ -75,6 +75,12 @@ brew "sambadevi/powerlevel9k/powerlevel9k"
 brew "stripe/stripe-cli/stripe"
 
 cask "1password-cli"
+cask "font-fira-code", args: { appdir: "~/Applications" }
+cask "font-fira-mono-nerd-font", args: { appdir: "~/Applications" }
+cask "font-fira-mono", args: { appdir: "~/Applications" }
+cask "font-geist", args: { appdir: "~/Applications" }
+cask "font-geist-mono", args: { appdir: "~/Applications" }
+cask "font-geist-mono-nerd-font", args: { appdir: "~/Applications" }
 cask "font-go-mono-nerd-font", args: { appdir: "~/Applications" }
 cask "font-hack-nerd-font", args: { appdir: "~/Applications" }
 cask "font-hurmit-nerd-font", args: { appdir: "~/Applications" }
