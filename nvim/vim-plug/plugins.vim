@@ -133,6 +133,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Lazygit plugin in neovim
     Plug 'kdheepak/lazygit.nvim'
 
+    " webdevicons
+    Plug 'nvim-tree/nvim-web-devicons'
+
     """""""""""""""" Ruby/rails related plugins """"""""""""""""""
 
     """""""""""""""" PHP-related plugins """"""""""""""""
