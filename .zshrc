@@ -79,7 +79,6 @@ ZSH_THEME=""
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
-	ripgrep
 	fzf
 	copybuffer
 

@@ -23,8 +23,8 @@ config.color_scheme = "Poimandres Storm"
 -- config.color_scheme = "rose-pine-dawn"
 -- config.color_scheme = "Tomorrow"
 
-config.font = wezterm.font("GeistMono Nerd Font", { weight = "ExtraBold" })
-config.font_size = 13.0
+config.font = wezterm.font("JetBrains Mono", { weight = "Bold" })
+config.font_size = 13.5
 
 config.enable_tab_bar = false
 
