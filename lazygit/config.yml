@@ -21,14 +21,12 @@ gui:
       - '#c6d0f5'
     searchingActiveBorderColor:
       - '#e5c890'
-
   authorColors:
     '*': '#babbf1'
-
 git:
   paging:
     colorArg: always
-    pager: delta --dark --paging=never
+    pager: delta --paging=never --diff-so-fancy
   commit:
     signOff: true
   autoFetch: false
