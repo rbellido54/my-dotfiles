@@ -1,5 +1,5 @@
 require("mason").setup()
-local servers = { "gopls", "lua_ls", "ruby_lsp", "vtsls", "dockerls", "bashls" }
+local servers = { "gopls", "lua_ls", "ruby_lsp", "vtsls", "bashls" }
 require("mason-lspconfig").setup({
 	ensure_installed = servers,
 })
