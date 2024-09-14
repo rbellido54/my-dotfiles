@@ -82,11 +82,13 @@ cask "font-geist-mono-nerd-font", args: { appdir: "~/Applications" }
 cask "font-go-mono-nerd-font", args: { appdir: "~/Applications" }
 cask "font-hack-nerd-font", args: { appdir: "~/Applications" }
 cask "font-hurmit-nerd-font", args: { appdir: "~/Applications" }
+cask "font-jetbrains-mono", args: { appdir: "~/Applications" }
 cask "font-meslo-lg-nerd-font", args: { appdir: "~/Applications" }
 cask "font-monofur-nerd-font", args: { appdir: "~/Applications" }
 cask "font-noto-nerd-font", args: { appdir: "~/Applications" }
 cask "font-profont-nerd-font", args: { appdir: "~/Applications" }
 cask "font-space-mono-nerd-font", args: { appdir: "~/Applications" }
+cask "font-zed-mono-nerd-font", args: { appdir: "~/Applications" }
 cask "orbstack"
 cask "alacritty"
 cask "wezterm"

@@ -3121,6 +3121,24 @@
           },
           "full_name": "font-agave-nerd-font"
         }
+      },
+      "font-zed-mono-nerd-font": {
+        "version": "3.2.1",
+        "options": {
+          "args": {
+            "appdir": "~/Applications"
+          },
+          "full_name": "font-zed-mono-nerd-font"
+        }
+      },
+      "font-jetbrains-mono": {
+        "version": "2.304",
+        "options": {
+          "args": {
+            "appdir": "~/Applications"
+          },
+          "full_name": "font-jetbrains-mono"
+        }
       }
     },
     "mas": {
