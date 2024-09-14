@@ -4,9 +4,9 @@ local config = wezterm.config_builder()
 
 -- Dark themes
 -- config.color_scheme = "Catppuccin Frappe"
--- config.color_scheme = "Catppuccin Macchiato"
+config.color_scheme = "Catppuccin Macchiato"
 -- config.color_scheme = "Catppuccin Mocha"
-config.color_scheme = "Everforest Dark (Gogh)"
+-- config.color_scheme = "Everforest Dark (Gogh)"
 -- config.color_scheme = "Everforest Dark Medium (Gogh)" -- nightly
 -- config.color_scheme = "Everforest Dark Soft (Gogh)" -- nightly
 -- config.color_scheme = "Nova (base16)"
@@ -29,9 +29,9 @@ config.color_scheme = "Everforest Dark (Gogh)"
 -- config.color_scheme = "rose-pine-dawn"
 -- config.color_scheme = "Tomorrow"
 
-config.font = wezterm.font("FiraMono Nerd Font Mono", { weight = "Medium" })
+config.font = wezterm.font("MesloLGL Nerd Font Mono", { weight = "DemiBold" })
 config.font_size = 13.0
-config.line_height = 1.4
+config.line_height = 1.2
 
 config.enable_tab_bar = false
 
