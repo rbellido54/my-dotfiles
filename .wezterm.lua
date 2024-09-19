@@ -31,7 +31,7 @@ config.color_scheme = "Catppuccin Macchiato"
 
 config.font = wezterm.font("MesloLGL Nerd Font Mono", { weight = "DemiBold" })
 config.font_size = 13.0
-config.line_height = 1.1
+config.line_height = 1.2
 
 config.enable_tab_bar = false
 
@@ -39,9 +39,9 @@ config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.97
 config.macos_window_background_blur = 10
 config.window_padding = {
-	left = 5,
-	right = 5,
-	top = 0,
+	left = 10,
+	right = 10,
+	top = 20,
 	bottom = 0,
 }
 
