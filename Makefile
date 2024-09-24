@@ -13,6 +13,12 @@ apply-nvim:
 	-@rm -rf $(HOME)/.config/nvim
 	@ln -s $(PWD)/nvim $(HOME)/.config/
 
+.PHONY: apply-zellij
+apply-zellij:
+	@echo "Applying zellij"
+	-@rm -rf $(HOME)/.config/zellij
+	@ln -s $(PWD)/zellij $(HOME)/.config/
+
 .PHONY: apply-tmux
 apply-tmux:
 	@echo "Applying .tmux.conf"
