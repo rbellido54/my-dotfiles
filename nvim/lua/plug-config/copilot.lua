@@ -178,10 +178,18 @@
 
 
 -- Copilot autosuggestions
-vim.g.copilot_no_tab_map = true
 vim.g.copilot_hide_during_completion = 0
 vim.g.copilot_proxy_strict_ssl = 0
-vim.keymap.set('i', '<S-Tab>', 'copilot#Accept("\\<S-Tab>")', { expr = true, replace_keycodes = false })
+
+vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false
+})
+vim.g.copilot_no_tab_map = true
+
+vim.keymap.set('i', '<M-c>', '<Plug>(copilot-accept-word)')
+vim.keymap.set('i', '<M-C-c>', '<Plug>(copilot-accept-line)')
+
 
 local chat = require('CopilotChat')
 
