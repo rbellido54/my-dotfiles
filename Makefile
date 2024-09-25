@@ -13,6 +13,12 @@ apply-nvim:
 	-@rm -rf $(HOME)/.config/nvim
 	@ln -s $(PWD)/nvim $(HOME)/.config/
 
+.PHONY: apply-wezterm
+apply-wezterm:
+	@echo "Applying wezterm config"
+	-@rm -rf $(HOME)/.config/wezterm
+	@ln -s $(PWD)/wezterm $(HOME)/.config/
+
 .PHONY: apply-zellij
 apply-zellij:
 	@echo "Applying zellij"
