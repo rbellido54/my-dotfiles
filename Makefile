@@ -64,8 +64,8 @@ apply-aliases:
 .PHONY: apply-starship
 apply-starship:
 	@echo "Applying .starship.toml"
-	-@rm $(HOME)/.config/.starship.toml
-	@ln -s $(PWD)/.starship.toml $(HOME)/.config/.starship.toml
+	-@rm $(HOME)/.config/starship.toml
+	@ln -s $(PWD)/starship.toml $(HOME)/.config/starship.toml
 
 .PHONY: create-gitconfig
 create-gitconfig:
