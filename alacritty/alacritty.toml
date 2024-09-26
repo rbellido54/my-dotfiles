@@ -1,5 +1,5 @@
 import = [
-"~/.config/alacritty/themes/thelovelace.toml"
+  "~/.config/alacritty/themes/thelovelace.toml"
 ]
 
 [font]
