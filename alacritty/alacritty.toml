@@ -20,7 +20,7 @@ save_to_clipboard = true
 padding = {x = 5, y = 5}
 decorations = "Buttonless"
 dynamic_padding = true
-opacity = 0.95
+opacity = 0.93
 option_as_alt = "Both"
 startup_mode = "Maximized"
 blur = true
