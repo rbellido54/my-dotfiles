@@ -4,9 +4,9 @@ local config = wezterm.config_builder()
 
 -- Dark themes
 -- config.color_scheme = "Catppuccin Frappe"
-config.color_scheme = "Catppuccin Macchiato"
+-- config.color_scheme = "Catppuccin Macchiato"
 -- config.color_scheme = "Catppuccin Mocha"
--- config.color_scheme = "Everforest Dark (Gogh)"
+config.color_scheme = "Everforest Dark (Gogh)"
 -- config.color_scheme = "Everforest Dark Medium (Gogh)" -- nightly
 -- config.color_scheme = "Everforest Dark Soft (Gogh)" -- nightly
 -- config.color_scheme = "Nova (base16)"
@@ -30,8 +30,8 @@ config.color_scheme = "Catppuccin Macchiato"
 -- config.color_scheme = "Tomorrow"
 
 config.font = wezterm.font("MesloLGL Nerd Font Mono", { weight = "DemiBold" })
-config.font_size = 13.0
-config.line_height = 1.2
+config.font_size = 12.0
+config.line_height = 1.1
 
 config.enable_tab_bar = false
 
@@ -39,10 +39,10 @@ config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.97
 config.macos_window_background_blur = 10
 config.window_padding = {
-	left = 10,
-	right = 10,
-	top = 15,
-	bottom = 5,
+	left = 3,
+	right = 0,
+	top = 0,
+	bottom = 0,
 }
 
 return config

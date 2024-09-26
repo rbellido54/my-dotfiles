@@ -71,6 +71,7 @@ brew "hashicorp/tap/terraform"
 brew "jesseduffield/lazygit/lazygit"
 brew "localstack/tap/localstack-cli"
 brew "stripe/stripe-cli/stripe"
+brew "zellij"
 
 cask "1password-cli"
 cask "font-fira-code", args: { appdir: "~/Applications" }
