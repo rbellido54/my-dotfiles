@@ -1,5 +1,5 @@
-.PHONY: all
-all: apply-zshrc apply-nvim apply-tmux apply-functions apply-fzf apply-path-exports apply-aliases
+.PHONY: apply-all
+apply-all: apply-zshrc apply-nvim apply-tmux apply-functions apply-fzf apply-path-exports apply-aliases apply-starship apply-wezterm apply-zellij
 
 .PHONY: apply-zshrc
 apply-zshrc:
