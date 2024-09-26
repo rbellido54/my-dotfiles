@@ -3,20 +3,25 @@ import = [
 ]
 
 [font]
-normal.family = "MesloLGS Nerd Font Mono"
+normal = { family = "MesloLGL Nerd Font Mono", style="Regular" }
 size = 12.5
 offset = { x = 1, y = 2 }
 
 [env]
 TERM = "xterm-256color"
 
+[scrolling]
+history = 100000
+
+[selection]
+save_to_clipboard = true
+
 [window]
 padding = {x = 5, y = 5}
 decorations = "Buttonless"
 dynamic_padding = true
-opacity = 0.98
+opacity = 0.95
 option_as_alt = "Both"
 startup_mode = "Maximized"
+blur = true
 
-[selection]
-save_to_clipboard = true
