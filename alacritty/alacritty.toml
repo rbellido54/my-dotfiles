@@ -4,7 +4,7 @@ import = [
 
 [font]
 normal = { family = "MesloLGL Nerd Font Mono", style="Regular" }
-size = 12.5
+size = 13.0
 offset = { x = 1, y = 2 }
 
 [env]
