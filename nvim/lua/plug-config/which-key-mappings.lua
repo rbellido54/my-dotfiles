@@ -1,13 +1,29 @@
 local wk = require("which-key")
 
-local vmaps = {}
+local vmaps = {
+	{ "<leader>aa", "<cmd>CopilotChatOpen<cr>", desc = "AI Open", remap = false },
+}
+
 local nmaps = {
 	{ "<leader>/", "<cmd>Commentary<cr>", desc = "Comment/uncomment line", remap = false },
 	{ "<leader>G", "<cmd>RG<cr>", desc = "RipGrep", remap = false },
+
 	{ "<leader>a", group = "AI - Copilot", remap = false },
-	{ "<leader>aa", "<cmd>CopilotChatToggle<cr>", desc = "CopilotChat - toggle", remap = false },
-	{ "<leader>aq", "<function 1>", desc = "CopilotChat - quick chat", remap = false },
-	{ "<leader>ax", "<cmd>CopilotChatReset<cr>", desc = "CopilotChat - reset", remap = false },
+	{ "<leader>aa", "<cmd>CopilotChatToggle<cr>", desc = "AI Toggle", remap = false },
+	{ "<leader>ax", "<cmd>CopilotChatReset<cr>", desc = "AI Reset", remap = false },
+	{ "<leader>as", "<cmd>CopilotChatStop<cr>", desc = "AI Stop", remap = false },
+	{ "<leader>am", "<cmd>CopilotChatModels<cr>", desc = "AI Select Models", remap = false },
+	{
+		"<leader>aq",
+		function()
+			local input = vim.fn.input("Quick Chat: ")
+			if input ~= "" then
+				require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
+			end
+		end,
+		desc = "CopilotChat - Quick chat",
+	},
+
 	{ "<leader>b", group = "Buffer", remap = false },
 	{ "<leader>b", "<cmd>Buffers<cr>", desc = "Buffers", remap = false },
 	{ "<leader>bl", "<cmd>BLines<cr>", desc = "Search by line in buffer", remap = false },
