@@ -94,6 +94,7 @@ cask "font-zed-mono-nerd-font", args: { appdir: "~/Applications" }
 cask "orbstack"
 cask "alacritty"
 cask "wezterm"
+cask "ghostty"
 
 mas "1Password for Safari", id: 1569813296
 mas "Adobe Lightroom", id: 1451544217
