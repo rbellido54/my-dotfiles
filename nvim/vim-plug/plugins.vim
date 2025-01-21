@@ -112,7 +112,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " GH Co-pilot baby
     Plug 'github/copilot.vim'
     " Plug 'zbirenbaum/copilot.lua'
-    Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
+    Plug 'CopilotC-Nvim/CopilotChat.nvim'
 
     " Lint
     Plug 'mfussenegger/nvim-lint'
