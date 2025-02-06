@@ -39,7 +39,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'williamboman/mason.nvim'
     Plug 'williamboman/mason-lspconfig.nvim'
     Plug 'neovim/nvim-lspconfig'
-    
+
     " COQ - code completion
     Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
     " 9000+ Snippets
@@ -47,11 +47,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
     " Need to **configure separately**
     Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
-    
+
     " Airline status
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    
+
     " Which key plugin
     Plug 'folke/which-key.nvim'
 
