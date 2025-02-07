@@ -85,14 +85,9 @@ plugins=(
 	zsh-autosuggestions
 	fast-syntax-highlighting
 
-	rbenv
 	rails
-	nvm
-	# zsh-autocomplete
+	zsh-autocomplete
 )
-
-# Lazyload NVM until it's called
-zstyle ':omz:plugins:nvm' lazy yes
 
 source $ZSH/oh-my-zsh.sh
 
@@ -136,8 +131,5 @@ eval "$(starship init zsh)"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Ruby / rbenv
-eval "$(rbenv init - zsh)"
-
-# Python / pyenv
-eval "$(pyenv init -)"
+# Mise
+eval "$(/Users/rmb/.local/bin/mise activate zsh)"
