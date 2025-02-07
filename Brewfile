@@ -5,7 +5,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "jesseduffield/lazydocker"
-tap "localstack/tap"
+# tap "localstack/tap"
 tap "stripe/stripe-cli"
 
 brew "zstd"
@@ -92,8 +92,8 @@ cask "font-profont-nerd-font", args: { appdir: "~/Applications" }
 cask "font-space-mono-nerd-font", args: { appdir: "~/Applications" }
 cask "font-zed-mono-nerd-font", args: { appdir: "~/Applications" }
 cask "orbstack"
-cask "alacritty"
-cask "wezterm"
+# cask "alacritty"
+# cask "wezterm"
 cask "ghostty"
 
 mas "1Password for Safari", id: 1569813296
