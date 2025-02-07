@@ -1,5 +1,5 @@
 .PHONY: apply-all
-apply-all: apply-zshrc apply-nvim apply-tmux apply-functions apply-fzf apply-path-exports apply-aliases apply-starship apply-wezterm apply-zellij
+apply-all: run-pre-install apply-zshrc apply-nvim apply-tmux apply-functions apply-fzf apply-path-exports apply-aliases apply-starship run-post-install
 
 .PHONY: apply-zshrc
 apply-zshrc:
@@ -12,18 +12,6 @@ apply-nvim:
 	@echo "Applying nvim"
 	-@rm -rf $(HOME)/.config/nvim
 	@ln -s $(PWD)/nvim $(HOME)/.config/
-
-.PHONY: apply-wezterm
-apply-wezterm:
-	@echo "Applying wezterm config"
-	-@rm -rf $(HOME)/.config/wezterm
-	@ln -s $(PWD)/wezterm $(HOME)/.config/
-
-.PHONY: apply-zellij
-apply-zellij:
-	@echo "Applying zellij"
-	-@rm -rf $(HOME)/.config/zellij
-	@ln -s $(PWD)/zellij $(HOME)/.config/
 
 .PHONY: apply-tmux
 apply-tmux:
@@ -72,3 +60,14 @@ create-gitconfig:
 	@echo "Creating .gitconfig"
 	@cp $(PWD)/.gitconfig $(HOME)/.gitconfig
 
+.PHONY: run-pre-install
+run-pre-install:
+	@echo "Running pre-install script"
+	@chmod +x $(CURDIR)/pre-install.sh
+	sh $(CURDIR)/pre-install.sh
+
+.PHONY: run-post-install
+run-post-install:
+	@echo "Running post-install script"
+	@chmod +x $(CURDIR)/post-install.sh
+	sh $(CURDIR)/post-install.sh
