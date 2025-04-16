@@ -1,7 +1,6 @@
 tap "buo/cask-upgrade"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "jesseduffield/lazydocker"
