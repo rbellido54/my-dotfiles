@@ -13,7 +13,7 @@ local select = require("CopilotChat.select")
 chat.setup({
 	debug = true,
 	log_level = "debug",
-	model = "gpt-4o",
+	model = "gpt-4o-mini",
 	selection = select.visual,
 	prompts = {
 		Explain = {
