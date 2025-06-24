@@ -1,14 +1,48 @@
-require("mason").setup()
-local servers = { "gopls", "lua_ls", "ruby_lsp", "vtsls", "bashls" }
-require("mason-lspconfig").setup({
-	ensure_installed = servers,
+-- Custom Go Lang LS (gopls) setup
+vim.lsp.config("gopls", {
+	settings = {
+		gopls = {
+			completeUnignored = true,
+			usePlaceholders = true,
+			analyses = {
+				unusedparams = true,
+			},
+		},
+	},
 })
 
-local coq = require("coq")
-local nvim_lsp = require("lspconfig")
+vim.lsp.config("lua_ls", {
+	settings = {
+		Lua = {
+			runtime = {
+				version = "LuaJIT",
+			},
+			diagnostics = {
+				globals = {
+					"vim",
+					"require",
+				},
+			},
+		},
+	},
+})
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+require("mason").setup()
+require("mason-lspconfig").setup({
+	ensure_installed = {
+		"gopls",
+		"lua_ls",
+		"ruby_lsp",
+		"vtsls",
+		"bashls",
+		"docker_compose_language_service",
+	},
+	automatic_enable = {
+		"ruby_lsp",
+		"lua_ls",
+		"bashls",
+	},
+})
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -56,28 +90,15 @@ vim.keymap.set("n", "<leader>lsx", function()
 	})
 end)
 
--- Custom Go Lang LS (gopls) setup
-nvim_lsp.gopls.setup({
-	settings = {
-		gopls = {
-			completeUnignored = true,
-			usePlaceholders = true,
-			analyses = {
-				unusedparams = true,
-			},
-		},
-	},
-})
-
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-for _, lsp in ipairs(servers) do
-	nvim_lsp[lsp].setup(coq.lsp_ensure_capabilities({
-		capabilities = capabilities,
-		on_attach = on_attach,
-		flags = {
-			debounce_text_changes = 150,
-		},
-		max_files = 0,
-	}))
-end
+-- for _, lsp in ipairs(servers) do
+-- 	nvim_lsp[lsp].setup(coq.lsp_ensure_capabilities({
+-- 		capabilities = capabilities,
+-- 		on_attach = on_attach,
+-- 		flags = {
+-- 			debounce_text_changes = 150,
+-- 		},
+-- 		max_files = 0,
+-- 	}))
+-- end

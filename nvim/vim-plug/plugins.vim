@@ -41,12 +41,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neovim/nvim-lspconfig'
 
     " COQ - code completion
-    Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+    " Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
     " 9000+ Snippets
-    Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+    " Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
     " lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
     " Need to **configure separately**
-    Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+    "Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 
     " Airline status
     Plug 'vim-airline/vim-airline'
