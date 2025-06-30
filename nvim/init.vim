@@ -6,11 +6,11 @@ source $HOME/.config/nvim/general/settings.vim
 " source $HOME/.config/nvim/themes/onedark.vim
 " source $HOME/.config/nvim/themes/base16.vim
 " source $HOME/.config/nvim/themes/gruvbox.vim
-" source $HOME/.config/nvim/themes/nightfox.vim
+source $HOME/.config/nvim/themes/nightfox.vim
 " source $HOME/.config/nvim/themes/deus.vim
 " source $HOME/.config/nvim/themes/everforest.vim
 " source $HOME/.config/nvim/themes/tokyonight.vim
-source $HOME/.config/nvim/themes/kanagawa.vim
+" source $HOME/.config/nvim/themes/kanagawa.vim
 " source $HOME/.config/nvim/themes/oceanic-next.vim
 " source $HOME/.config/nvim/themes/catpuccin.vim
 " source $HOME/.config/nvim/themes/neon.vim
