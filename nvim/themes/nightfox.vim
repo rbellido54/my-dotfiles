@@ -6,7 +6,7 @@
 " colorscheme nightfox
 " colorscheme terafox
 " colorscheme duskfox
-colorscheme nordfox
-" colorscheme carbonfox
+" colorscheme nordfox
+colorscheme carbonfox
 
 let g:airline_theme = 'atomic'
