@@ -33,3 +33,9 @@ swapshift_tmux_windows() {
     # Remove if you don't want automatic window renumbering
     tmux set-option -g renumber-windows on
 }
+
+which-terminal() {
+  local ppid
+  ppid=$(ps -o ppid= -p $$)
+  ps -o comm= -p "$ppid"
+}
