@@ -10,23 +10,53 @@ local plugins = {
   -- Better Syntax Support
   {
     "sheerun/vim-polyglot",
-    event = "BufReadPre",
+    event = { "BufReadPre", "BufNewFile" },
+    init = function()
+      -- Disable some polyglot features for better performance
+      vim.g.polyglot_disabled = { "sensible" }
+    end,
   },
 
   -- Auto pairs for '(' '[' '{'
   {
     "jiangmiao/auto-pairs",
     event = "InsertEnter",
+    config = function()
+      -- Configure auto-pairs if needed
+      vim.g.AutoPairsShortcutToggle = ""  -- Disable default toggle
+    end,
   },
 
   -- File explorers
   {
     "nvim-tree/nvim-tree.lua",
-    cmd = { "NvimTreeToggle", "NvimTreeOpen", "NvimTreeClose" },
+    cmd = { "NvimTreeToggle", "NvimTreeOpen", "NvimTreeClose", "NvimTreeFindFile" },
     keys = {
       { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle file explorer" },
+      { "<leader>ef", "<cmd>NvimTreeFindFile<cr>", desc = "Find file in explorer" },
     },
     dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("nvim-tree").setup({
+        disable_netrw = true,
+        hijack_netrw = true,
+        view = {
+          width = 30,
+        },
+        renderer = {
+          icons = {
+            glyphs = {
+              default = "",
+              symlink = "",
+            },
+          },
+        },
+        filters = {
+          dotfiles = false,
+          custom = { ".git", "node_modules", ".cache" },
+        },
+      })
+    end,
   },
 
   {

@@ -7,19 +7,19 @@ These are the tasks to be completed for the spec detailed in @.agent-os/specs/20
 
 ## Tasks
 
-- [ ] 1. **Lazy.nvim Installation and Setup**
-  - [ ] 1.1 Write tests for lazy.nvim installation and initialization
-  - [ ] 1.2 Create lazy.nvim bootstrap script with automatic installation
-  - [ ] 1.3 Implement lazy.nvim configuration structure in new plugins.lua
-  - [ ] 1.4 Add fallback mechanism to vim-plug if lazy.nvim fails
-  - [ ] 1.5 Verify all tests pass
+- [x] 1. **Lazy.nvim Installation and Setup**
+  - [x] 1.1 Write tests for lazy.nvim installation and initialization
+  - [x] 1.2 Create lazy.nvim bootstrap script with automatic installation
+  - [x] 1.3 Implement lazy.nvim configuration structure in new plugins.lua
+  - [x] 1.4 Add fallback mechanism to vim-plug if lazy.nvim fails
+  - [x] 1.5 Verify all tests pass
 
-- [ ] 2. **Core System Plugins Migration**
-  - [ ] 2.1 Write tests for core plugin functionality (vim-polyglot, auto-pairs, nvim-tree)
-  - [ ] 2.2 Convert core system plugins to lazy.nvim specifications
-  - [ ] 2.3 Configure appropriate lazy loading triggers for file system plugins
-  - [ ] 2.4 Test that plugin configurations load correctly from plug-config/
-  - [ ] 2.5 Verify all tests pass
+- [x] 2. **Core System Plugins Migration**
+  - [x] 2.1 Write tests for core plugin functionality (vim-polyglot, auto-pairs, nvim-tree)
+  - [x] 2.2 Convert core system plugins to lazy.nvim specifications
+  - [x] 2.3 Configure appropriate lazy loading triggers for file system plugins
+  - [x] 2.4 Test that plugin configurations load correctly from plug-config/
+  - [x] 2.5 Verify all tests pass
 
 - [ ] 3. **Theme and UI Plugins Migration**
   - [ ] 3.1 Write tests for theme switching and UI plugin functionality
