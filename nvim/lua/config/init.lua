@@ -2,6 +2,10 @@
 -- Module loader for Neovim configuration
 -- Part of the core configuration migration to Lua
 
+-- Initialize startup profiling
+local profiler = require("config.startup-profiler")
+profiler.profile_startup()
+
 -- Initialize plugin manager first
 require("config.plugin-manager").setup()
 
