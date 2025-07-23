@@ -35,13 +35,13 @@ These are the tasks to be completed for the spec detailed in @.agent-os/specs/20
   - [x] 4.4 Test autocmd behavior matches original
   - [x] 4.5 Verify all tests pass
 
-- [ ] 5. Create New init.lua Entry Point
-  - [ ] 5.1 Write tests for init.lua loading sequence
-  - [ ] 5.2 Create init.lua with proper module loading
-  - [ ] 5.3 Preserve vim-plug and plugin config loading
-  - [ ] 5.4 Test startup sequence works correctly
-  - [ ] 5.5 Verify all functionality preserved
-  - [ ] 5.6 Verify all tests pass
+- [x] 5. Create New init.lua Entry Point
+  - [x] 5.1 Write tests for init.lua loading sequence
+  - [x] 5.2 Create init.lua with proper module loading
+  - [x] 5.3 Preserve vim-plug and plugin config loading
+  - [x] 5.4 Test startup sequence works correctly
+  - [x] 5.5 Verify all functionality preserved
+  - [x] 5.6 Verify all tests pass
 
 - [ ] 6. Backup and Transition
   - [ ] 6.1 Create backup of original init.vim
