@@ -2,6 +2,9 @@
 -- Module loader for Neovim configuration
 -- Part of the core configuration migration to Lua
 
+-- Initialize plugin manager first
+require("config.plugin-manager").setup()
+
 -- List of configuration modules to load
 local config_modules = {
   "config.options",   -- Vim options and settings

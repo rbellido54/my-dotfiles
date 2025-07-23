@@ -2,10 +2,7 @@
 -- Modern Neovim configuration entry point
 -- Migrated from init.vim while preserving all functionality
 
--- Load vim-plug and plugins
-vim.cmd("source $HOME/.config/nvim/vim-plug/plugins.vim")
-
--- Load our new Lua configuration modules
+-- Load our new Lua configuration modules (includes plugin manager)
 require("config")
 
 -- Load theme configuration
