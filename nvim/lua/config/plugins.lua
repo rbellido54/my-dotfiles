@@ -67,57 +67,110 @@ local plugins = {
   -- THEMES
   {
     "joshdick/onedark.vim",
+    cmd = "colorscheme onedark",
     lazy = true,
   },
   {
     "chriskempson/base16-vim",
+    cmd = { "colorscheme base16-default-dark", "colorscheme base16-default-light" },
     lazy = true,
   },
   {
     "rafamadriz/neon",
+    cmd = "colorscheme neon",
     lazy = true,
   },
   {
     "folke/tokyonight.nvim",
     branch = "main",
+    cmd = { "colorscheme tokyonight", "colorscheme tokyonight-night", "colorscheme tokyonight-storm", "colorscheme tokyonight-day" },
     lazy = true,
+    config = function()
+      require("tokyonight").setup({
+        style = "night",
+        transparent = false,
+        terminal_colors = true,
+      })
+    end,
   },
   {
     "EdenEast/nightfox.nvim",
     lazy = false,  -- Load immediately since this is our default theme
     priority = 1000,
+    config = function()
+      require("nightfox").setup({
+        options = {
+          transparent = false,
+          terminal_colors = true,
+        }
+      })
+    end,
   },
   {
     "sainnhe/everforest",
+    cmd = "colorscheme everforest",
     lazy = true,
+    config = function()
+      vim.g.everforest_style = "soft"
+      vim.g.everforest_transparent_background = 0
+    end,
   },
   {
     "ajmwagar/vim-deus",
+    cmd = "colorscheme deus",
     lazy = true,
   },
   {
     "mhartington/oceanic-next",
+    cmd = "colorscheme OceanicNext",
     lazy = true,
   },
   {
     "rebelot/kanagawa.nvim",
+    cmd = { "colorscheme kanagawa", "colorscheme kanagawa-wave", "colorscheme kanagawa-dragon" },
     lazy = true,
+    config = function()
+      require("kanagawa").setup({
+        compile = false,
+        undercurl = true,
+        transparent = false,
+      })
+    end,
   },
   {
     "catppuccin/nvim",
     name = "catppuccin",
+    cmd = { "colorscheme catppuccin", "colorscheme catppuccin-latte", "colorscheme catppuccin-frappe", "colorscheme catppuccin-macchiato", "colorscheme catppuccin-mocha" },
     lazy = true,
+    config = function()
+      require("catppuccin").setup({
+        flavour = "mocha",
+        transparent_background = false,
+        integrations = {
+          nvimtree = true,
+          which_key = true,
+        },
+      })
+    end,
   },
   {
     "ellisonleao/gruvbox.nvim",
+    cmd = "colorscheme gruvbox",
     lazy = true,
+    config = function()
+      require("gruvbox").setup({
+        transparent_mode = false,
+      })
+    end,
   },
   {
     "yorickpeterse/vim-paper",
+    cmd = "colorscheme paper",
     lazy = true,
   },
   {
     "eldritch-theme/eldritch.nvim",
+    cmd = "colorscheme eldritch",
     lazy = true,
   },
 
@@ -143,12 +196,25 @@ local plugins = {
     "vim-airline/vim-airline",
     dependencies = { "vim-airline/vim-airline-themes" },
     event = "VimEnter",
+    config = function()
+      -- Airline will be configured by themes/airline.vim
+      -- This ensures it loads after the theme is set
+    end,
   },
 
   -- Which key plugin
   {
     "folke/which-key.nvim",
+    keys = { "<leader>", "<c-w>", "<c-r>", "g", "z", '"', "'", "`", "c", "v", "d" },
     event = "VeryLazy",
+    config = function()
+      local wk = require("which-key")
+      wk.setup({
+        window = {
+          border = "rounded",
+        },
+      })
+    end,
   },
 
   -- Vim commentary plugin
@@ -169,9 +235,22 @@ local plugins = {
   -- neovim colorizer
   {
     "norcalli/nvim-colorizer.lua",
-    cmd = { "ColorizerToggle", "ColorizerAttachToBuffer" },
+    cmd = { "ColorizerToggle", "ColorizerAttachToBuffer", "ColorizerDetachFromBuffer" },
+    ft = { "css", "scss", "html", "javascript", "typescript", "lua", "vim" },
     config = function()
-      require("colorizer").setup()
+      require("colorizer").setup({
+        filetypes = { "css", "scss", "html", "javascript", "typescript", "lua", "vim" },
+        user_default_options = {
+          RGB = true,
+          RRGGBB = true,
+          names = true,
+          RRGGBBAA = true,
+          rgb_fn = true,
+          hsl_fn = true,
+          css = true,
+          css_fn = true,
+        },
+      })
     end,
   },
 
@@ -350,6 +429,26 @@ local plugins = {
   {
     "nvim-tree/nvim-web-devicons",
     lazy = true,
+    config = function()
+      require("nvim-web-devicons").setup({
+        default = true,
+        strict = true,
+        override_by_filename = {
+          [".gitignore"] = {
+            icon = "",
+            color = "#f1502f",
+            name = "Gitignore"
+          }
+        },
+        override_by_extension = {
+          ["log"] = {
+            icon = "",
+            color = "#81e043",
+            name = "Log"
+          }
+        },
+      })
+    end,
   },
 }
 

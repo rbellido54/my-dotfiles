@@ -21,13 +21,13 @@ These are the tasks to be completed for the spec detailed in @.agent-os/specs/20
   - [x] 2.4 Test that plugin configurations load correctly from plug-config/
   - [x] 2.5 Verify all tests pass
 
-- [ ] 3. **Theme and UI Plugins Migration**
-  - [ ] 3.1 Write tests for theme switching and UI plugin functionality
-  - [ ] 3.2 Migrate all 12 theme plugins to lazy.nvim with lazy loading
-  - [ ] 3.3 Convert airline, web-devicons, and colorizer to lazy specifications
-  - [ ] 3.4 Implement lazy loading for UI plugins based on events and commands
-  - [ ] 3.5 Test theme switching works correctly with lazy-loaded plugins
-  - [ ] 3.6 Verify all tests pass
+- [x] 3. **Theme and UI Plugins Migration**
+  - [x] 3.1 Write tests for theme switching and UI plugin functionality
+  - [x] 3.2 Migrate all 12 theme plugins to lazy.nvim with lazy loading
+  - [x] 3.3 Convert airline, web-devicons, and colorizer to lazy specifications
+  - [x] 3.4 Implement lazy loading for UI plugins based on events and commands
+  - [x] 3.5 Test theme switching works correctly with lazy-loaded plugins
+  - [x] 3.6 Verify all tests pass
 
 - [ ] 4. **LSP and Development Tools Migration**
   - [ ] 4.1 Write tests for LSP functionality, formatting, and linting
