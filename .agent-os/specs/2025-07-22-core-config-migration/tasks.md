@@ -20,13 +20,13 @@ These are the tasks to be completed for the spec detailed in @.agent-os/specs/20
   - [x] 2.4 Test all options are set correctly
   - [x] 2.5 Verify all tests pass
 
-- [ ] 3. Migrate Key Mappings
-  - [ ] 3.1 Write tests for keymap functionality
-  - [ ] 3.2 Create lua/config/keymaps.lua from keys/mappings.vim
-  - [ ] 3.3 Convert all key bindings to vim.keymap.set() syntax
-  - [ ] 3.4 Convert FZF configuration to Lua
-  - [ ] 3.5 Test all key bindings work identically
-  - [ ] 3.6 Verify all tests pass
+- [x] 3. Migrate Key Mappings
+  - [x] 3.1 Write tests for keymap functionality
+  - [x] 3.2 Create lua/config/keymaps.lua from keys/mappings.vim
+  - [x] 3.3 Convert all key bindings to vim.keymap.set() syntax
+  - [x] 3.4 Convert FZF configuration to Lua
+  - [x] 3.5 Test all key bindings work identically
+  - [x] 3.6 Verify all tests pass
 
 - [ ] 4. Extract Auto Commands
   - [ ] 4.1 Write tests for autocmd functionality
