@@ -28,12 +28,12 @@ These are the tasks to be completed for the spec detailed in @.agent-os/specs/20
   - [x] 3.5 Test all key bindings work identically
   - [x] 3.6 Verify all tests pass
 
-- [ ] 4. Extract Auto Commands
-  - [ ] 4.1 Write tests for autocmd functionality
-  - [ ] 4.2 Create lua/config/autocmds.lua
-  - [ ] 4.3 Convert autocommands from general/settings.vim
-  - [ ] 4.4 Test autocmd behavior matches original
-  - [ ] 4.5 Verify all tests pass
+- [x] 4. Extract Auto Commands
+  - [x] 4.1 Write tests for autocmd functionality
+  - [x] 4.2 Create lua/config/autocmds.lua
+  - [x] 4.3 Convert autocommands from general/settings.vim
+  - [x] 4.4 Test autocmd behavior matches original
+  - [x] 4.5 Verify all tests pass
 
 - [ ] 5. Create New init.lua Entry Point
   - [ ] 5.1 Write tests for init.lua loading sequence
