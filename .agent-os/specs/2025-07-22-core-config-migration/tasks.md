@@ -13,12 +13,12 @@ These are the tasks to be completed for the spec detailed in @.agent-os/specs/20
   - [x] 1.3 Test module loading functionality
   - [x] 1.4 Verify all modules load without errors
 
-- [ ] 2. Migrate Options Configuration
-  - [ ] 2.1 Write tests for options verification
-  - [ ] 2.2 Create lua/config/options.lua from general/settings.vim
-  - [ ] 2.3 Convert all vim settings to vim.opt syntax
-  - [ ] 2.4 Test all options are set correctly
-  - [ ] 2.5 Verify all tests pass
+- [x] 2. Migrate Options Configuration
+  - [x] 2.1 Write tests for options verification
+  - [x] 2.2 Create lua/config/options.lua from general/settings.vim
+  - [x] 2.3 Convert all vim settings to vim.opt syntax
+  - [x] 2.4 Test all options are set correctly
+  - [x] 2.5 Verify all tests pass
 
 - [ ] 3. Migrate Key Mappings
   - [ ] 3.1 Write tests for keymap functionality
