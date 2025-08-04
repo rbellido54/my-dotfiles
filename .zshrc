@@ -132,4 +132,16 @@ eval "$(starship init zsh)"
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Mise
-eval "$(/Users/rmb/.local/bin/mise activate zsh)"
+eval "$(~/.local/bin/mise activate zsh)"
+
+if ! pgrep -u "$USER" ssh-agent >/dev/null; then
+  eval "$(ssh-agent -s)"
+fi
+
+if command -v zoxide &> /dev/null; then
+  eval "$(zoxide init bash)"
+fi
+
+# Add key only if it's not already loaded
+ssh-add -l >/dev/null 2>&1 || ssh-add ~/.ssh/id_ed25519
+# source ~/.local/share/omarchy/default/bash/rc
