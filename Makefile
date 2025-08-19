@@ -16,9 +16,11 @@ apply-nvim:
 .PHONY: apply-tmux
 apply-tmux:
 	@echo "Applying .tmux.conf"
-	-@rm $(HOME)/.tmux.conf && ln -s $(PWD)/.tmux.conf $(HOME)/.tmux.conf
+	-@rm $(HOME)/.tmux.conf
+	ln -s $(PWD)/.tmux.conf $(HOME)/.tmux.conf
 	@echo "Applying .tmux.conf.local"
-	-@rm $(HOME)/.tmux.conf.local && ln -s $(PWD)/.tmux.conf.local $(HOME)/.tmux.conf.local
+	-@rm $(HOME)/.tmux.conf.local
+	ln -s $(PWD)/.tmux.conf.local $(HOME)/.tmux.conf.local
 
 .PHONY: create-envs
 create-envs:
@@ -71,3 +73,13 @@ run-post-install:
 	@echo "Running post-install script"
 	@chmod +x $(CURDIR)/post-install.sh
 	sh $(CURDIR)/post-install.sh
+
+.PHONY: lazygit-config-arch
+lazygit-config-arch:
+	@echo "Applying lazygit config for Arch Linux"
+	@ln -s $(PWD)/lazygit $(HOME)/.config
+
+.PHONY: lazygit-config-mac
+lazygit-config-mac:
+	@echo "Applying lazygit config for Mac OS"
+	@ln -s $(PWD)/lazygit $(HOME)/Library/Application\ Support/
