@@ -86,7 +86,6 @@ plugins=(
 	fast-syntax-highlighting
 
 	rails
-	zsh-autocomplete
 )
 
 source $ZSH/oh-my-zsh.sh
