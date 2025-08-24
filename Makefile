@@ -13,6 +13,12 @@ apply-nvim:
 	-@rm -rf $(HOME)/.config/nvim
 	@ln -s $(PWD)/nvim $(HOME)/.config/
 
+.PHONY: apply-lazyvim
+apply-lazyvim:
+	@echo "Applying lazyvim"
+	-@rm -rf $(HOME)/.config/nvim
+	@ln -s $(PWD)/lazyvim/nvim $(HOME)/.config/
+
 .PHONY: apply-tmux
 apply-tmux:
 	@echo "Applying .tmux.conf"
