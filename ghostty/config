@@ -1,0 +1,35 @@
+font-family = Hack Nerd Font Mono
+macos-option-as-alt = true
+
+
+## Themes ##
+
+### Dark theme
+# theme = nordfox
+# theme = nightfox
+# theme = Raycast_Dark
+# theme = Rapture
+# theme = Relaxed
+# theme = rose-pine-moon
+# theme = Ryuuko
+# theme = Slate
+# theme = Snazzy
+# theme = Snazzy Soft
+# theme = Spacedust
+# theme = SpaceGray Bright
+# theme = terafox
+# theme = tokyonight
+# theme = tokyonight-storm
+# theme = tokyonight_moon
+# theme = Vaughn
+# theme = zenburned
+theme = Everforest Dark - Hard
+# theme = Tomorrow Night Burns
+# theme = Tomorrow Night Eighties
+# theme = Violet Dark
+
+### Light theme
+# theme = primary
+# theme = rose-pine-dawn
+# theme = tokyonight-day
+# theme = dawnfox
